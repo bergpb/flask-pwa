@@ -9,9 +9,10 @@
     <meta name="description" content="Flask-PWA" />
     <meta name="theme-color" content="#ffffff" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="manifest" href="{{ url_for('static', filename='manifest.json') }}"/>
-    <link rel="apple-touch-icon" href="{{ url_for('static', filename='images/apple-icon-180x180.png') }}">
-    <link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.ico') }}" type="image/x-icon">
+
+    <link rel="manifest" href="{{ url_for('pwa.static', filename='manifest.json') }}"/>
+    <link rel="apple-touch-icon" href="{{ url_for('pwa.static', filename='images/apple-icon-180x180.png') }}">
+    <link rel="icon" href="{{ url_for('pwa.static', filename='images/favicon.ico') }}" type="image/x-icon">
     {% endblock metas %}
 
     {% block css %}

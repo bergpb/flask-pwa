@@ -6,8 +6,8 @@ def create_app():
     app = Flask(__name__)
     PWA(app)
 
-    @app.route('/')
+    @app.route("/")
     def index():
-        return render_template('index.html')
+        return render_template("index.html")
 
     return app

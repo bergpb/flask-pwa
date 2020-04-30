@@ -14,13 +14,10 @@ homepage = "https://github.com/pacotei/flask-pwa"
 [tool.poetry.dependencies]
 python = "^3.6"
 flask = "^1.1.2"
-Flask-SSLify = "^0.1.5"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.4.1"
-pytest-selenium = "^1.17.0"
 black = "^19.10b0"
-selenium = "^3.141.0"
 python-dotenv = "^0.13.0"
 
 

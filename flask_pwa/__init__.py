@@ -1,9 +1,11 @@
+import os
 import pkg_resources
-from os import environ
-from flask import Flask, Blueprint, Markup, send_from_directory
+from flask import Flask, Blueprint, Markup, send_file
 
 
 class PWA(object):
+    root_dir = os.path.dirname(os.getcwd())
+
     def __init__(self, app=None):
         if app is not None:
             self.init_app(app)
@@ -26,10 +28,19 @@ class PWA(object):
         )
 
     def _init_sw(self):
-        return send_from_directory('static', 'js/sw.js')
+        return send_file(
+            pkg_resources.resource_stream("flask_pwa", "static/js/sw.js",),
+            attachment_filename="sw.js",
+        )
 
     def _init_manifest(self):
-        return send_from_directory('static', 'manifest.json')
+        return send_file(
+            pkg_resources.resource_stream("flask_pwa", "static/manifest.json",),
+            attachment_filename="manifest.json",
+        )
 
     def _init_offline(self):
-        return send_from_directory('templates', 'offline.html')
+        return send_file(
+            pkg_resources.resource_stream("flask_pwa", "templates/pwa/offline.html",),
+            attachment_filename="offline.html",
+        )
