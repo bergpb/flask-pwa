@@ -1,6 +1,6 @@
 # Flask-PWA
 
-![Python package](https://github.com/pacotei/flask-pwa/workflows/Python%20package/badge.svg)
+![build](https://github.com/pacotei/flask-pwa/workflows/build/badge.svg)
 
 A extension to give a PWA experience into your Flask web application.
 This extension provide some files to give your app some PWA experience like app installation, cached files and offline page.
