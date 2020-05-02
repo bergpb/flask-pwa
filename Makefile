@@ -1,5 +1,5 @@
 test:
-	@pytest -vv --driver Chrome
+	@pytest -vv
 
 format:
 	@black flask_pwa sample_app tests
