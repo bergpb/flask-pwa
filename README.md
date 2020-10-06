@@ -20,3 +20,6 @@ pip install flask-pwa
 ### How it works
 Flask-PWA provide some configuration files into your app: ```manifest.json```, ```sw.js```, ```offline.html``` and ```icons```, to deliver best PWA experience.  
 PWA use this files to configure the minimum environment to works.
+
+### ToDo:
+- [ ] User can provide your configuration files, overwriting default package files, like ```offline.html```, ```manifest.json```, ```sw.js```.
