@@ -1,11 +1,10 @@
 import pytest
 
-from sample_app import create_app
+from sample_app import app
 
 
 @pytest.fixture()
 def client():
-    app = create_app()
     context = app.app_context()
     context.push()
 
